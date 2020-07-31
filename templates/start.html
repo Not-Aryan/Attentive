@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classroom API Quickstart</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}">
+
+    <!-- <link rel="stylesheet" href="start.css"> -->
+  </head>
+  <body>
+
+    <div class="main-container">
+      <nav>
+        <h1 class="logo">Hi Someone!</h1>
+        <ul>
+          <li><a class="underline" href="/">Start</a></li>
+          <li><a class="underline" href="/train">Train</a></li>
+          <img id="PFP" src="" alt="">
+        </ul>
+        
+      </nav>
+      <button id="signout_button" style="display: none;">Sign Out</button>
+
+
+      <div class="content">
+        <h2 class="caption1">Select your class:</h2>
+        <select id="classes"></select>
+  
+        <h2 class="caption1">Select your assignment:</h2>
+        <select id="assignments"></select>
+  
+        <button class="start" onclick="change()">Start</button>
+      </div>
+    </div>
+
+    <div class="start-modal">
+      <h1 class="sign-in">Student Sign In</h1>
+      <img class="goog" id="authorize_button" src="/static/images/program/google.jpg" alt="">
+      <p class="caption">Please grant Google Classroom permissions</p>
+    </div>
+
+
+    <!-- <p>Classroom API Quickstart</p> -->
+
+
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/start.js') }}"></script>
+
+    <!-- <script src="start.js"></script> -->
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+  </body>
+</html>
+
+
+
+

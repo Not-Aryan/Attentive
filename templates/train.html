@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classroom API Quickstart</title>
+    <meta charset="utf-8" />
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/train.css') }}">
+
+    <!-- <link rel="stylesheet" href="train.css"> -->
+  </head>
+  <body>
+
+    <div class="main-container">
+      <nav>
+        <h1 class="logo">Hi Someone!</h1>
+        <ul>
+          <li><a class="underline" href="start.html">Start</a></li>
+          <li><a class="underline" href="train.html">Train</a></li>
+          <img id="PFP" src="" alt="">
+        </ul>
+        
+      </nav>
+      <button id="signout_button" style="display: none;">Sign Out</button>
+
+
+      <div class="content">
+          <h1 class="first">Training:</h1>
+          <p class="explain">We're going to train our computer to recognize if a student is paying attention.</p>
+          <p class="explain">Categories:</p>
+          <img class="img front" src="/static/images/program/front.jpg" alt="">
+          <img class="img turned" src="/static/images/program/turning.gif" alt="">
+          <p class="img-explain f">Front</p>
+          <p class="img-explain t">Turned</p>
+
+          <button class="train-button">Train</button>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-content">
+          <span class="modal-close">&times;</span>
+          <h1 class="fot">Front</h1>
+          <p class="fot-ex">For the next 45 seconds look at your computer and don't forget about the corners.</p>
+          <content id="vid">
+            <img src="{{ url_for('video_feed') }}">
+          </content>
+          <!-- <video id="vid" autoplay></video> -->
+          <a class="time" onclick="startfront()">Start</a>
+          <div id="Prog">
+            <div id="myBar"></div>
+          </div>
+      </div>
+
+  </div>
+
+
+    <div class="start-modal">
+      <h1 class="sign-in">Student Sign In</h1>
+      <img class="goog" id="authorize_button" src="/static/images/program/google.jpg" alt="">
+      <p class="caption">Please grant Google Classroom permissions</p>
+    </div>
+
+
+    <!-- <p>Classroom API Quickstart</p> -->
+
+
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+      var usButton = document.querySelector(".train-button");
+      var close = document.querySelector(".modal-close");
+      var m = document.querySelector(".modal");
+
+      usButton.addEventListener("click", function() {
+          m.classList.toggle("active");
+      });
+
+      close.addEventListener("click", function() {
+          m.classList.toggle("active");
+      });
+
+      m.addEventListener("click", function() {
+          if(event.currentTarget === event.target) {
+              m.classList.toggle("active");
+          }
+      });
+    </script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/train.js') }}"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+  </body>
+</html>
+
+
+
+

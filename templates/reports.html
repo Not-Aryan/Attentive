@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classroom API Quickstart</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reports.css') }}">
+
+
+    <!-- <link rel="stylesheet" href="/static/css/reports.css"> -->
+  </head>
+  <body>
+
+    <div class="main-container">
+      <nav>
+        <h1 class="logo">Hi Someone!</h1>
+        <ul>
+          <li><a class="underline" href="reports.html">Reports</a></li>
+          <img id="PFP" src="" alt="">
+        </ul>
+        
+      </nav>
+      <button id="signout_button" style="display: none;">Sign Out</button>
+
+
+      <div class="content">
+        <h2 class="caption1">Select your class:</h2>
+        <select id="classes"></select>
+  
+        <h2 class="caption1">Select your assignment:</h2>
+        <select id="assignments"></select>
+  
+        <button class="start" onclick="showrep()">Generate Report</button>
+      </div>
+
+      <div class="report">
+        <ul class="name-list">
+          <li onclick="drop('${data.name}')" class="person">  
+            <h2 class="name">Ex Student</h2>
+            <div class="f-info">
+                <h2 class="attenspan">X secs</h2>
+                <h2 class="turns">Y Turns</h2>
+            </div>
+          </li>
+          <ul id="${data.name}" class="person-info">
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+          </ul>
+          <li onclick="drop('${data.name}')" class="person">  
+            <h2 class="name">Ex Student 1</h2>
+            <div class="f-info">
+                <h2 class="attenspan">X secs</h2>
+                <h2 class="turns">Y Turns</h2>
+            </div>
+          </li>
+          <ul id="${data.name}" class="person-info">
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+          </ul>
+          <li onclick="drop('${data.name}')" class="person">  
+            <h2 class="name">Ex Student 2</h2>
+            <div class="f-info">
+                <h2 class="attenspan">X secs</h2>
+                <h2 class="turns">Y Turns</h2>
+            </div>
+          </li>
+          <ul id="${data.name}" class="person-info">
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+          </ul>
+          <li onclick="drop('${data.name}')" class="person">  
+            <h2 class="name">Ex Student 3</h2>
+            <div class="f-info">
+                <h2 class="attenspan">X secs</h2>
+                <h2 class="turns">Y Turns</h2>
+            </div>
+          </li>
+          <ul id="${data.name}" class="person-info">
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+            <li class="info">Ex Time, </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="start-modal">
+      <h1 class="sign-in">Teacher Sign In</h1>
+      <img class="goog" id="authorize_button" src="/static/images/program/google.jpg" alt="">
+      <p class="caption">Please grant Google Classroom permissions</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- <script>
+
+    </script> -->
+
+    <script src="/static/js/reports.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+  </body>
+</html>
+
+
+
+

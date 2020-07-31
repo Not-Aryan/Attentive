@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+
+@font-face {
+    font-family: gilroy;
+    src: url(/static/fonts/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: gilroy-light;
+    src: url(/static/fonts/Gilroy-Light.otf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Start Modal  */
+
+.start-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+.sign-in {
+    font-family: gilroy;
+    font-size: 8rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* .start-modal button {
+    background: none;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.start-modal button:active {
+    background: none;
+    border: none;
+} */
+
+.goog {
+    border-radius: 150px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    /* display: block;
+    margin: 0 auto; */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.goog:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+
+
+.caption {
+    text-align: center;
+    font-size: 2rem;
+    font-family: gilroy-light;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+/* Main - Container  */
+
+
+.main-container {
+    transition: .5s;
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1010px;
+    margin: 80px auto;
+    transition: all.5s ease;
+}
+
+
+.caption1 {
+    font-family: gilroy;
+    font-size: 40px;
+}
+
+select {
+    font-family: gilroy;
+    width: 1000px; 
+    text-align-last:center; 
+    font-size: 60px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+}
+
+.start {
+    font-family: gilroy;
+    font-size: 60px;
+    width: 1000px;
+    margin-top: 40px;
+    background: none;
+    transition: .3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start:hover {
+    color: #b24bf3;
+}
+
+
+/* Report Section */
+
+
+.report {
+    flex-wrap: wrap;
+    width: 1010px;
+    display: none;
+    margin: 0 auto;
+    transition: all.5s ease;
+}
+
+.name-list .person {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-family: gilroy-light;
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+.name {
+    float: left;
+}
+
+.attenspan, .turns {
+    float: right;
+}
+
+.attenspan{
+    margin-left: 10px;
+}
+
+.name-list .person:hover {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.person-info {
+    margin-bottom: 10px;
+    background: #ddd;
+    height: 0;
+    opacity: 0;
+    display: block;
+    /* position: relative; */
+    transition: all .5s ease;
+    width: 1010px;
+}
+
+.person-info li {
+    height: 0;
+}
+
+.active {
+    height: 80px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.active[id='Aryan-Jain'] {
+    height: 220px;
+}
+
+
+.person-info li {
+    color: #000;
+    display: inline;
+    font-size: 20px;
+}
+
+/* Navigation (Part of Main) */
+nav {
+    display: flex;
+    padding: 3px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.logo {
+    font-family: gilroy;
+    font-weight: bold;
+    color: #b24bf3;
+    font-size: 4rem;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    position: relative;
+    bottom: 40px;
+    display: inline-block;
+    /* align-items: center;
+    justify-content: center; */
+    /* margin-bottom: 40px; */
+}
+
+
+nav ul li {
+    right: 20px;
+}
+
+nav ul li a {
+    font-family: gilroy-light;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    margin-left: 10px;
+    margin-right: 40px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #b24bf3;
+    transition: width .3s;
+}
+
+.underline:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+#PFP {
+    margin-top: 20px;
+    border-radius: 100px;
+}
+
+
+
+
